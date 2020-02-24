@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--  Start : Your code should be within this block -->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 10"
+        android:textSize="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorBlack"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How old are you?"
+        android:textSize="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="55dp"
+        ></TextView>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Under 18"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="85dp"
+        android:textSize="20dp"
+        ></RadioButton>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19-25"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="85dp"
+        android:textSize="20dp"
+        ></RadioButton>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25-35"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="85dp"
+        android:textSize="20dp"
+        ></RadioButton>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="beyond 35"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="85dp"
+        android:textSize="20dp"
+        ></RadioButton>
+
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:id="@+id/btn_ques10_next"
+        android:textSize="18dp"
+        android:background="@color/colorGreen"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        >
+
+    </Button>
+
+    <!-- END    : Your code should be within this block -->
+
+</LinearLayout>
