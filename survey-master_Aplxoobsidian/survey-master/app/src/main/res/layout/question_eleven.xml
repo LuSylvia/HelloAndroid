@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--  Start : Your code should be within this block -->
+    <TextView
+        android:id="@+id/q11title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qusetion 11"
+        android:textSize="24sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/q11content"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="What is your gender?"
+        android:textSize="20sp"
+        android:layout_below="@id/q11title"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="60dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/r11"
+        android:layout_below="@id/q11content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="40dp"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_q11"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="50dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:onClick="to_q_twelve"
+        />
+
+    <!-- END    : Your code should be within this block -->
+
+</RelativeLayout>

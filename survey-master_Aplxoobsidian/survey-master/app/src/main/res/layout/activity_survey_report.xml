@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".survey_report">
+
+  <TextView
+      android:id="@+id/survey_report_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="SURVEY REPORT"
+      android:textColor="@android:color/black"
+      android:textSize="18sp"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+/>
+    <TextView
+        android:id="@+id/rep_one"
+        android:layout_below="@id/survey_report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q1"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_two"
+        android:layout_below="@id/rep_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_three"
+        android:layout_below="@id/rep_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q3"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_four"
+        android:layout_below="@id/rep_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q4"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/rep_five"
+        android:layout_below="@id/rep_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q5"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+
+        />
+    <TextView
+        android:id="@+id/rep_six"
+        android:layout_below="@id/rep_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q6"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_seven"
+        android:layout_below="@id/rep_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q7"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/rep_eight"
+        android:layout_below="@id/rep_seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q8"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_nine"
+        android:layout_below="@id/rep_eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q9"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_ten"
+        android:layout_below="@id/rep_nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q10"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_eleven"
+        android:layout_below="@id/rep_ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q11"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/rep_twelve"
+        android:layout_below="@id/rep_eleven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q12"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnresult"
+    android:layout_below="@+id/rep_twelve"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="50dp"
+    android:text="Get Result"
+    android:onClick="getresult"
+    android:background="@color/colorAccent"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tofin"
+        android:layout_below="@id/rep_twelve"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Finish"
+        android:onClick="to_fin"
+        android:background="@color/colorPrimary"
+        />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/btn_save"
+      android:layout_below="@id/btnresult"
+      android:layout_marginRight="50dp"
+      android:layout_centerHorizontal="true"
+      android:text="save"
+
+      android:background="@color/colorPrimary"
+      />
+
+
+
+
+
+
+
+</RelativeLayout>
