@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".showFinalAnswer"
+    android:orientation="vertical">
+   <TextView
+       android:id="@+id/Q1_GetBack"
+       android:layout_height="40dp"
+       android:layout_width="match_parent"
+       android:text="Q1:"
+       android:textSize="20sp"
+       />
+    <TextView
+        android:id="@+id/Q2_GetBack"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:text="Q2:"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q3_GetBack"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:text="Q3:"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q4_GetBack"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:text="Q4:"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q5_GetBack"
+        android:layout_height="80dp"
+        android:text="Q5:"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q6_GetBack"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:text="Q6:"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q7_GetBack"
+        android:layout_height="40dp"
+        android:text="Q7:Just like before.(only a model)"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q8_GetBack"
+        android:layout_height="40dp"
+        android:text="Q8:Just like before.(only a model)"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q9_GetBack"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:text="Q9:Just like before.(only a model)"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q10_GetBack"
+        android:layout_height="40dp"
+        android:text="Q10:Just like before.(only a model)"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/Q11_GetBack"
+        android:layout_height="40dp"
+        android:text="Q11:Just like before.(only a model)"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        />
+ <Button
+     android:id="@+id/storeToFile"
+     android:layout_width="match_parent"
+     android:layout_height="100dp"
+     android:text="SAVE"
+     android:background="@color/colorPrimary"
+     android:textSize="60sp"
+     />
+
+
+</LinearLayout>

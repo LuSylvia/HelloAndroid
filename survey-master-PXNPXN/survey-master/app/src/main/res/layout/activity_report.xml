@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Report"
+        android:scrollbars="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:textSize="40sp"
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_report1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.Which brand of phone will you choose if you are going to buy a new one?"
+            android:textSize="20sp"
+            android:layout_marginTop="60dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question1"
+            android:layout_marginTop="110dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:text="2.How much does your phone cost?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question2"
+            android:layout_marginTop="190dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:text="3.What kind of phone are you using?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question3"
+            android:layout_marginTop="270dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:text="4.What funtions does your phone have now?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:text="question4"
+            android:textSize="20sp"
+            android:checked="true"/>
+
+        <TextView
+            android:id="@+id/tv_report5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:text="5.What functions are the most often used?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="430dp"
+            android:text="question5"
+            android:textSize="20sp"
+            android:checked="true"/>
+
+        <TextView
+            android:id="@+id/tv_report6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="480dp"
+            android:text="6.What function do you expect your phone to have
+ in the future?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_six"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="530dp"
+            android:text="question6"
+            android:textSize="20sp"
+            android:checked="true"/>
+
+        <TextView
+            android:id="@+id/tv_report7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="580dp"
+            android:text="7.In which condition will you buy a new phone?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_seven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question7"
+            android:layout_marginTop="630dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="680dp"
+            android:text="8.Which brand of phone will you choose if you are going to buy a new one?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question8"
+            android:layout_marginTop="730dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="780dp"
+            android:text="9.Which characteristic do you think is most
+        important to evaluate a phone?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_nine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question9"
+            android:layout_marginTop="830dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="880dp"
+            android:text="10.How old are you?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question10"
+            android:layout_marginTop="910dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="960dp"
+            android:text="11.What's your gender?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_eleven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question11"
+            android:layout_marginTop="990dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_report12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1050dp"
+            android:text="12.How much money do you earn per month?"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/rb_report_twelve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="question12"
+            android:layout_marginTop="1100dp"
+            android:checked="true"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1180dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/colorPrimary"
+            android:text="save" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
