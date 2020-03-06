@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    //带全部参数的构造函数，此构造函数必不可少
     public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -15,8 +14,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //创建数据库sql语句 并 执行
-        String sql = "create table sqlite_records(name varchar(20),email varchar(20),phone varchar(20))";
+        //创建数据库sql语句并执行
+        String sql = "create table SQLiteData(name varchar(20),email varchar(20),phone varchar(20))";
         db.execSQL(sql);
     }
 
