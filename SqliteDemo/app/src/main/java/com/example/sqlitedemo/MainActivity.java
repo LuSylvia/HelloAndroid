@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         tv_records.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         //播放背景音乐
-        //Serviceintent = new Intent("com.angel.Android.MUSIC");
         Serviceintent=new Intent();
         Serviceintent.setPackage(getPackageName());
         Serviceintent.setAction("com.angel.Android.MUSIC");

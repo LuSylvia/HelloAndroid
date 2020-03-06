@@ -36,9 +36,10 @@ public class DatabaseOperator {
         Cursor cursor = db.rawQuery(Query, null);
        while (cursor.moveToNext()){
            User user=new User();
-           user.setName(cursor.getString(0));
-           user.setEmail(cursor.getString(1));
-           user.setPhone(cursor.getString(2));
+           user.setPhone(cursor.getString(0));
+           user.setName(cursor.getString(1));
+           user.setEmail(cursor.getString(2));
+
            users.add(user);
 
        }
@@ -51,7 +52,7 @@ public class DatabaseOperator {
     // 添加姓名,邮箱，手机号
     public void add(User user) {
         db.execSQL("insert into SQLiteData values(?,?,?)",
-                new Object[] {user.getName(),user.getEmail(),user.getPhone() });
+                new Object[] {user.getPhone(),user.getName(),user.getEmail() });
 
     }
 
