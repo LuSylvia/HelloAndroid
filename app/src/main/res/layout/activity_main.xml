@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name"
+        android:text="NAME:"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        ></TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_name"
+        android:id="@+id/ed_name"
+        android:layout_marginTop="10dp"
+        ></EditText>
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:text="EMAIL:"
+        android:textSize="18sp"></TextView>
+
+    <EditText
+        android:id="@+id/ed_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tv_email"></EditText>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_email"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="MOBILE NUMBER:"
+        android:textSize="18sp"></TextView>
+
+    <EditText
+        android:id="@+id/ed_phone"
+        android:layout_width="228dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/ed_email"
+        android:layout_marginLeft="107dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tv_email"></EditText>
+
+
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no records"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_records"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone"
+        android:layout_marginTop="524dp"
+        android:text="WRITE"
+        android:onClick="myClick"
+        android:textSize="18sp"></Button>
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="524dp"
+        android:layout_toRightOf="@id/btn_write"
+        android:text="READ"
+        android:onClick="myClick"
+        android:textSize="18sp"></Button>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="524dp"
+        android:layout_toRightOf="@id/btn_read"
+        android:text="UPDATE"
+        android:onClick="myClick"
+        android:textSize="18sp"></Button>
+
+    <Button
+        android:id="@+id/btn_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="524dp"
+        android:layout_toRightOf="@id/btn_update"
+        android:text="REMOVE"
+        android:onClick="myClick"
+
+        android:textSize="18sp"></Button>
+
+
+</RelativeLayout>
