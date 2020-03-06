@@ -1,11 +1,15 @@
 package com.example.sqlite;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 public class DatabaseOperator {
 
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
 
-    public LianxirenOperator(Context context) {
+    public DatabaseOperator(Context context) {
         dbHelper = new DatabaseHelper(context, "SQLiteData", null, 1);
         db = dbHelper.getWritableDatabase();
     }
@@ -25,37 +29,23 @@ public class DatabaseOperator {
 
 
 
-    // 添加联系人
-    public void add(LianxirenBean lxr) {
+    // 添加姓名,邮箱，手机号
+    public void add(String name,String email,String phone) {
         db.execSQL("insert into SQLiteData values(?,?,?)",
-                new Object[] { lxr.getName(), lxr.getNumber(), lxr.getIntroduce() });
+                new Object[] {name,email,phone });
 
     }
 
-    // 修改联系人
-    public void update(LianxirenBean lxr) {
-        db.execSQL("update lxrData set number=?,introduce=? where name=?",
-                new Object[] { lxr.getNumber(), lxr.getIntroduce(), lxr.getName() });
+    // 修改姓名，邮箱
+    public void update(String name,String email,String phone) {
+        db.execSQL("update SQLiteData set name=?,email=? where phone=?",
+                new Object[] { name, email, phone});
     }
 
-    // 删除联系人
-    public void delete(String name) {
-        db.execSQL("delete from lxrData where name=?", new String[] { name });
+    // 删除数据库中所有信息
+    public void delete() {
+        db.execSQL("delete from SQLiteData" );
     }
-
-    // 查询联系人
-    public LianxirenBean queryOne(String name) {
-        LianxirenBean lxr = new LianxirenBean();
-        Cursor c = db.rawQuery("select * from lxrData where name= ?", new String[] { name });
-        while (c.moveToNext()) {
-            lxr.setName(c.getString(0));
-            lxr.setNumber(c.getString(1));
-            lxr.setIntroduce(c.getString(2));
-        }
-        c.close();
-        return lxr;
-    }
-
 
 
 

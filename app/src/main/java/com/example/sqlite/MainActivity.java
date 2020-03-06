@@ -40,8 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void myClick(View view) {
+        //创建数据库操作类
+        DatabaseOperator db=new DatabaseOperator(this);
         switch (view.getId()){
             case R.id.btn_write:
+                String phone=ed_phone.getText().toString();
+
+
+
 
                 break;
             case R.id.btn_read:
