@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_records;
     //创建数据库操作类
     DatabaseOperator db;
-
+    //服务
     Intent Serviceintent;
 
 
@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         Serviceintent=new Intent();
         Serviceintent.setPackage(getPackageName());
         Serviceintent.setAction("com.angel.Android.MUSIC");
-
-
         startService(Serviceintent);
 
     }
@@ -58,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void myFindViewByID(){
-        ed_email=findViewById(R.id.ed_email);
-        ed_name=findViewById(R.id.ed_name);
-        ed_phone=findViewById(R.id.ed_phone);
+        ed_email=findViewById(R.id.edt_email);
+        ed_name=findViewById(R.id.edt_name);
+        ed_phone=findViewById(R.id.edt_phone);
         btn_write=findViewById(R.id.btn_write);
         btn_read=findViewById(R.id.btn_read);
         btn_remove=findViewById(R.id.btn_remove);
         btn_update=findViewById(R.id.btn_update);
-        tv_records=findViewById(R.id.tv_records);
+        tv_records=findViewById(R.id.tv_show);
 
     }
 

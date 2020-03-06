@@ -9,130 +9,148 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/tv_name"
-        android:text="NAME:"
-        android:textSize="18sp"
-        android:layout_margin="20dp"
-        ></TextView>
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:text="name"
+        android:textAllCaps="true"
+        android:textSize="17sp" />
 
     <EditText
+        android:id="@+id/edt_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/tv_name"
-        android:id="@+id/ed_name"
-        android:layout_marginTop="10dp"
-        ></EditText>
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tv_email"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/tv_name"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="3dp"
-        android:paddingLeft="10dp"
-        android:text="EMAIL:"
-        android:textSize="18sp"></TextView>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text="email:"
+        android:textAllCaps="true"
+        android:textSize="17sp" />
 
     <EditText
-        android:id="@+id/ed_email"
+        android:id="@+id/edt_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ed_name"
-        android:layout_marginLeft="10dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_name"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/tv_email"></EditText>
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/tv_phone"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/tv_email"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="35dp"
-        android:paddingLeft="10dp"
-        android:text="MOBILE NUMBER:"
-        android:textSize="18sp"></TextView>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:text="mobile number:"
+        android:textAllCaps="true"
+        android:textSize="17sp" />
 
     <EditText
-        android:id="@+id/ed_phone"
-        android:layout_width="228dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ed_email"
-        android:layout_marginLeft="107dp"
+        android:id="@+id/edt_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_email"
+        android:layout_marginLeft="190dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@id/tv_email"></EditText>
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/colorAccent"
+        android:textSize="17sp" />
+
+    <!--    buttons-->
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_write"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+
+            android:background="@color/colorAccent"
+            android:onClick="myClick"
+            android:text="write"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
 
 
+            android:background="@color/colorAccent"
+            android:onClick="myClick"
+            android:text="read"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="myClick"
+            android:text="update"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="myClick"
+            android:text="remove"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
-
-
+    </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_show"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:gravity="center"
-        android:text="no records"
-        android:textSize="18sp"
-        android:scrollbars="vertical"
-        android:layout_below="@id/tv_phone"
-        android:layout_marginTop="150dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/tv_records"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_write"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_phone"
-        android:layout_marginTop="350dp"
-        android:onClick="myClick"
-        android:text="WRITE"
-        android:textSize="18sp"></Button>
-
-    <Button
-        android:id="@+id/btn_read"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_phone"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="350dp"
-        android:layout_toRightOf="@id/btn_write"
-        android:text="READ"
-        android:onClick="myClick"
-        android:textSize="18sp"></Button>
-
-    <Button
-        android:id="@+id/btn_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_phone"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="350dp"
-        android:layout_toRightOf="@id/btn_read"
-        android:text="UPDATE"
-        android:onClick="myClick"
-        android:textSize="18sp"></Button>
-
-    <Button
-        android:id="@+id/btn_remove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_phone"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="350dp"
-        android:layout_toRightOf="@id/btn_update"
-        android:text="REMOVE"
-        android:onClick="myClick"
-
-        android:textSize="18sp"></Button>
-
-
+        android:layout_above="@id/layout_button"
+        android:layout_below="@+id/edt_phone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="-no records-"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp" />
 </RelativeLayout>
