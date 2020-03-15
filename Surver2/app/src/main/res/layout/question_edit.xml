@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/tv_edit"
+        android:textSize="25sp"
+
+        ></TextView>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_edit"
+        android:id="@+id/ed_edit"
+        android:layout_margin="30dp"
+        android:hint="Input the answer here."
+        android:gravity="center"
+        ></EditText>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="NEXT"
+        android:id="@+id/btn_edit_next"
+        android:textSize="18sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="#05ff65"
+        android:onClick="myClick"
+        android:layout_alignParentBottom="true"
+        >
+    </Button>
+
+
+
+
+</RelativeLayout>
+
