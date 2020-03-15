@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
     JSONArray jsonQuestions = null;
     JSONObject jsonQuestion = null;
     JSONArray jsonOptions = null;
+    ArrayList<JSONObject> options=new ArrayList<>();
 
 
     //GPS
@@ -462,6 +463,9 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
                 IntentIntegrator intentIntegrator = new IntentIntegrator(MainActivity.this);
                 //开始扫描
                 intentIntegrator.initiateScan();
+
+
+
                 break;
 
             default:
@@ -472,9 +476,10 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
     }
 
     private void jumpFinish() {
-        System.out.println(answers);
-
-
+        Intent intent=new Intent(MainActivity.this,Report2Activity.class);
+        intent.putExtra("result",answers);
+        startActivity(intent);
+        finish();
     }
 
 
@@ -498,7 +503,32 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
                 //Toast.makeText(this,"扫描内容:"+ result.getContents(),Toast.LENGTH_LONG).show();
                 //从二维码中扫描出Json字符串，并将其填充进json_QRcode
                 json_QRcode = result.getContents();
+                System.out.println(json_QRcode);
+                //构造问卷首页
+                try {
+                    //用通过扫描二维码读取到的json_QRcode构造jsonObject
+                    assert json_QRcode != null;
+                    jsonObject = new JSONObject(String.valueOf(new JSONObject(json_QRcode).getJSONObject("survey")));
+                    assert jsonObject != null;
+                    //获取问题数量，确定要构造的页面总数
+                    numTotal = this.jsonObject.optInt("len");
+                    System.out.println("length=" + numTotal);
+                    //获取所有问题对象
+                    jsonQuestions = this.jsonObject.optJSONArray("questions");
+                    //获取currQues处的问题
+                    loadJsonData();
 
+                    if (type.equals("single")) {
+                        showSingleQuestion();
+                    } else if (type.equals("multiple")) {
+                        showMultiselectQuestion();
+                    } else if (type.equals("edittext")) {
+                        showEditQuestion();
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -507,20 +537,33 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
 
 
     //显示单选页面
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     private void showSingleQuestion() throws JSONException {
         setContentView(R.layout.question_single);
         myFindViewByID_single();
         //获取所有选项
         jsonOptions = new JSONArray(String.valueOf(jsonQuestion.get("options")));
+
+
         //填充问题
         tv_single.setText((currQues + 1) + "." + question);
         //移除原有的选项
         rg_single.removeAllViews();
         optionsList.clear();
+        options.clear();
         //获取每个选项的内容，存放进选项列表里
 
         for (int i = 0; i < jsonOptions.length(); i++) {
-            optionsList.add(jsonOptions.getString(i));
+            options.add(jsonOptions.getJSONObject(i));
+            //首先调用options的get方法，得到jsonObject对象，再调用getString方法拿到键值对中的值
+            //然后再存放进optionList
+            JSONObject jtemp=options.get(i);
+            Log.e("survey2",jtemp.toString());
+            System.out.println("----------------------");
+            String s=jtemp.optString(String.valueOf(i+1));
+            assert s!=null;
+            optionsList.add(s);
+            //optionsList.add(jsonOptions.getString(i));
             //System.out.println("options:"+optionsList.get(i));
         }
 
@@ -528,9 +571,10 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
         for (int i = 0; i < optionsList.size(); i++) {
             RadioButton rb = new RadioButton(this);
             rg_single.addView(rb);
+            rb.setLeftTopRightBottom(100,10,50,10);
             rb.setTextSize(18);
             rb.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-            rb.setPadding(50, 10, 50, 10);
+            //rb.setPadding(100, 10, 50, 10);
             rb.setText(optionsList.get(i));
         }
     }
@@ -542,15 +586,24 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
         //移除原有选项
         rg_multiselect.removeAllViewsInLayout();
         optionsList.clear();
-
+        options.clear();
         jsonOptions = new JSONArray(String.valueOf(jsonQuestion.get("options")));
 
         //填充问题
         tv_multiselect.setText((currQues + 1) + "." + question);
         //获取每个选项的内容，存放进选项列表里
         for (int i = 0; i < jsonOptions.length(); i++) {
-            optionsList.add(jsonOptions.getString(i));
-            System.out.println("options:" + optionsList.get(i));
+            options.add(jsonOptions.getJSONObject(i));
+            //首先调用options的get方法，得到jsonObject对象，再调用getString方法拿到键值对中的值
+            //然后再存放进optionList
+            JSONObject jtemp=options.get(i);
+            Log.e("survey2",jtemp.toString());
+            System.out.println("----------------------");
+            String s=jtemp.optString(String.valueOf(i+1));
+            assert s!=null;
+            optionsList.add(s);
+            //optionsList.add(jsonOptions.getString(i));
+            //System.out.println("options:" + optionsList.get(i));
         }
         //移除checkboxes原有的checkbox
         checkBoxes.clear();
@@ -558,6 +611,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
         for (int i = 0; i < optionsList.size(); i++) {
             CheckBox cb = new CheckBox(this);
             rg_multiselect.addView(cb);
+            cb.setPadding(100,10,50,10);
             cb.setText(optionsList.get(i));
             checkBoxes.add(cb);
         }
