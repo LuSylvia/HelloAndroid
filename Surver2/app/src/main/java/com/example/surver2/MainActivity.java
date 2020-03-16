@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
 
     int numTotal = 0;//用于记录问题总数
     int currQues = 0;//用于记录当前是第几个问题
+    String Survey_id=null;//用于记录Survey_id
 
     private static int PERMISSION_GRANTED = 1;
     private ArrayList<String> optionsList = new ArrayList<>();//存储单个问题的所有选项
@@ -295,6 +296,10 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
 
     //读取json对象中的数据，并将其一一填充
     private void loadJsonData() throws JSONException {
+
+
+
+
         //获取问题对象，包括类型，题目，选项
         jsonQuestion = jsonQuestions.getJSONObject(currQues);
         //获取问题的类型
@@ -306,6 +311,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     public void myClick(View view) {
         switch (view.getId()) {
             //读取assets文件下的sample.json文件
@@ -315,9 +321,10 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
                     assert json_QRcode != null;
                     jsonObject = new JSONObject(String.valueOf(new JSONObject(json_QRcode).getJSONObject("survey")));
                     assert jsonObject != null;
+
+
                     //获取问题数量，确定要构造的页面总数
                     numTotal = this.jsonObject.optInt("len");
-                    System.out.println("length=" + numTotal);
                     //获取所有问题对象
                     jsonQuestions = this.jsonObject.optJSONArray("questions");
                     //获取currQues处的问题
@@ -475,9 +482,22 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
 
     }
 
-    private void jumpFinish() {
+    private void jumpFinish() throws JSONException {
         Intent intent=new Intent(MainActivity.this,Report2Activity.class);
         intent.putExtra("result",answers);
+
+        //获取Survey_id
+        if(jsonObject.has("id")){
+            Survey_id = this.jsonObject.getString("id");
+            System.out.println("jumpFinish测试，surveyid="+Survey_id);
+
+        }else{
+            System.out.println("jumpFinish测试，你又失败了~");
+        }
+
+
+        intent.putExtra("survey_id",Survey_id);
+
         startActivity(intent);
         finish();
     }
@@ -492,6 +512,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
      * @param resultCode
      * @param data
      */
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //获取解析结果
@@ -544,6 +565,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
         //获取所有选项
         jsonOptions = new JSONArray(String.valueOf(jsonQuestion.get("options")));
 
+        System.out.println("单选，Surveyid="+Survey_id);
 
         //填充问题
         tv_single.setText((currQues + 1) + "." + question);
@@ -553,6 +575,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
         options.clear();
         //获取每个选项的内容，存放进选项列表里
 
+        System.out.println("单选测试_________");
         for (int i = 0; i < jsonOptions.length(); i++) {
             options.add(jsonOptions.getJSONObject(i));
             //首先调用options的get方法，得到jsonObject对象，再调用getString方法拿到键值对中的值
@@ -578,6 +601,7 @@ public class MainActivity extends AppCompatActivity implements PermissionCallbac
             rb.setText(optionsList.get(i));
         }
     }
+
 
     //显示多选页面
     private void showMultiselectQuestion() throws JSONException {
