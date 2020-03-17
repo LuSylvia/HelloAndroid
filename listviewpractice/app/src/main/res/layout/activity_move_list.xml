@@ -5,14 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MoveList">
 
-
-    <ListView
-        android:id="@+id/listview"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_student_img"
+        >
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:id="@+id/tv_student_info"
+        ></TextView>
 
 
 </LinearLayout>
