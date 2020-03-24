@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_User.SelStopFragment">
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context=".Main_User.SelStopActivity">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center_horizontal|center"
+                android:singleLine="true"
+                android:text="车站选择"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorBlue"
+                android:textSize="20dp"
+
+                />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlue"
+                android:ellipsize="end"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="返回"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                android:visibility="invisible"
+
+
+
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="5">
+
+            <Button
+                android:id="@+id/btn_成都"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10dp"
+
+                android:text="成都" />
+
+            <Button
+                android:id="@+id/btn_重庆"
+                android:layout_width="100dp"
+
+
+                android:layout_marginLeft="20dp"
+                android:text="重庆" />
+
+            <Button
+                android:id="@+id/btn_贵阳"
+                android:layout_width="100dp"
+                android:layout_marginLeft="20dp"
+                android:text="贵阳"
+
+                />
+
+            <Button
+                android:id="@+id/btn_桂林"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10dp"
+
+                android:text="桂林" />
+
+            <Button
+                android:id="@+id/btn_肇庆"
+                android:layout_width="100dp"
+
+
+                android:layout_marginLeft="20dp"
+                android:text="肇庆" />
+
+            <Button
+                android:id="@+id/btn_广州"
+                android:layout_width="100dp"
+                android:layout_marginLeft="20dp"
+                android:text="广州"
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_珠海"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10dp"
+
+                android:text="珠海" />
+
+            <Button
+                android:id="@+id/btn_杭州"
+                android:layout_width="100dp"
+
+
+                android:layout_marginLeft="20dp"
+                android:text="杭州" />
+
+            <Button
+                android:id="@+id/btn_天门"
+                android:layout_width="100dp"
+                android:layout_marginLeft="20dp"
+                android:text="天门"
+
+                />
+
+            <Button
+                android:id="@+id/btn_荆州"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10dp"
+
+                android:text="荆州" />
+
+            <Button
+                android:id="@+id/btn_南京"
+                android:layout_width="100dp"
+
+
+                android:layout_marginLeft="20dp"
+                android:text="南京" />
+
+            <Button
+                android:id="@+id/btn_长沙"
+                android:layout_width="100dp"
+                android:layout_marginLeft="20dp"
+                android:text="长沙"
+
+                />
+
+
+            <Button
+                android:id="@+id/btn_金华"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10dp"
+
+                android:text="金华" />
+
+            <Button
+                android:id="@+id/btn_南昌"
+                android:layout_width="100dp"
+
+
+                android:layout_marginLeft="20dp"
+                android:text="南昌" />
+
+            <Button
+                android:id="@+id/btn_上海"
+                android:layout_width="100dp"
+                android:layout_marginLeft="20dp"
+                android:text="上海"
+
+                />
+
+
+        </GridLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="382dp"
+            android:background="@drawable/ic_fangwen2" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

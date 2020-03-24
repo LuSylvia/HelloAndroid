@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.railwayticketreservationsystem">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_user3"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_user3"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Main_User.DeleteActivity"></activity>
+        <activity android:name=".Main_User.MyticketsActivity" />
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".Main_User.userInfoActivity" />
+        <activity android:name=".Main_User.AboutActivity" />
+        <activity android:name=".select_buy_Tickets.BuyTicketActivity" />
+        <activity android:name=".select_buy_Tickets.SelectTicketsActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Main_User.MainActivity_user" />
+        <activity android:name=".MainActivity_Administrator" />
+    </application>
+
+</manifest>

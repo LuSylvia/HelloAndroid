@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_User.AboutActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal|center"
+            android:singleLine="true"
+            android:text="关于我们"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
+            android:textSize="20dp"
+
+            />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlue"
+            android:ellipsize="end"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="返回"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            android:visibility="invisible"
+
+
+
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/iv_Appicon"
+                android:layout_width="123dp"
+                android:layout_height="123dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140dp"
+                android:background="@drawable/ic_user2" />
+
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="老王铁路服务中心"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:textColor="@color/colorBlue"
+
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="版本信息：1.0.0\n客服电话：12406\n版权所有：老王铁路服务中心"
+            android:layout_marginTop="35sp"
+            android:textSize="25sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="衷心感谢您的使用！"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="50dp"
+
+            />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
